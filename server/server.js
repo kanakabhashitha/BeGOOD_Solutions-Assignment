@@ -1,11 +1,13 @@
 import express from "express";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
+import cors from "cors";
 
 const app = express();
 dotenv.config();
 app.use(express.json());
 app.use(bodyParser.json());
+app.use(cors());
 
 //import database connection
 import connectDB from "./db/Connection.js";

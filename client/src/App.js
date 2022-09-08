@@ -1,5 +1,11 @@
+import Home from "./pages/Home";
+
 function App() {
-  return <div>kanaka</div>;
+  return (
+    <>
+      <Home />
+    </>
+  );
 }
 
 export default App;
