@@ -59,9 +59,9 @@ const register = async (req, res, next) => {
 
 const getAllVehicle = async (req, res, next) => {
   try {
-    const vehicle = await Vehicle.find();
+    const vehicles = await Vehicle.find();
 
-    res.status(200).json({ vehicle });
+    res.status(200).json({ vehicles });
   } catch (error) {
     next(error);
   }
