@@ -1,11 +1,10 @@
 import React from "react";
-import { AddVehicle, VehicleDetails } from "../components/index";
+import { AddVehicle } from "../components/index";
 
 const Home = () => {
   return (
     <>
       <AddVehicle />
-      <VehicleDetails />
     </>
   );
 };

@@ -1,24 +1,8 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import react from "react";
 
-const VehicleDetails = () => {
-  const [vehicles, setVehicles] = useState([]);
-
-  useEffect(() => {
-    getAllVehicles();
-  }, [vehicles]);
-
-  const getAllVehicles = async () => {
-    try {
-      const response = await axios.get("http://localhost:5000/api/v1/vehicle");
-      setVehicles(response.data.vehicles);
-    } catch (error) {
-      alert(error.response.data);
-    }
-  };
-
+const VehicleDetails = ({ vehicles, onEditClick, onDeleteClick }) => {
   return (
-    <div className="vehicle-container">
+    <>
       <h2>vehicle details</h2>
 
       <h4>
@@ -40,15 +24,19 @@ const VehicleDetails = () => {
                 <td>{vehicle.numberPlate}</td>
                 <td>{vehicle.numberPlateType}</td>
                 <td>
-                  <button>Update</button>
-                  <button>Delete</button>
+                  <button onClick={() => onEditClick(vehicle._id)}>
+                    Update
+                  </button>
+                  <button onClick={() => onDeleteClick(vehicle._id)}>
+                    Delete
+                  </button>
                 </td>
               </tr>
             );
           })}
         </tbody>
       </table>
-    </div>
+    </>
   );
 };
 
