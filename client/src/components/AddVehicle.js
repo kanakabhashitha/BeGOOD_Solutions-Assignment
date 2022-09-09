@@ -53,6 +53,7 @@ const AddVehicle = () => {
 
       setTimeout(() => {
         setIsShow(false);
+        setNumberPlate("");
       }, 3000);
     }
   };
@@ -108,6 +109,8 @@ const AddVehicle = () => {
 
       setTimeout(() => {
         setIsShow(false);
+        setNumberPlate("");
+        setIsEdit(false);
       }, 3000);
     }
   };

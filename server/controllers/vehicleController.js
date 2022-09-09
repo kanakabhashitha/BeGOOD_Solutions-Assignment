@@ -4,7 +4,6 @@ import { BadRequestError, NotFoundError } from "../errors/index.js";
 import { plateNumberType } from "../utils/plateNumberType.js";
 import { isValidLicensePlate } from "../utils/isValidLicensePlate.js";
 import { formatNumberPlate } from "../utils/formatNumberPlate.js";
-import e from "express";
 
 const register = async (req, res, next) => {
   try {
