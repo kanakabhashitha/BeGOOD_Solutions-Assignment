@@ -89,6 +89,33 @@ input:focus {
   background: #7a1f5c;
 }
 
+.edit-btn,
+.delete-btn {
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  font-size: 0.7rem;
+  margin: 0 0.15rem;
+  transition: all 0.3s linear;
+}
+
+.edit-btn {
+  color: #bab819;
+}
+.edit-btn:hover {
+  color: #7e710ad3;
+  background-color: #f1efef;
+  border-radius: 50%;
+}
+.delete-btn {
+  color: #d72534;
+}
+.delete-btn:hover {
+  color: #842029;
+  background-color: #f1efef;
+  border-radius: 50%;
+}
+
 /* alert */
 
 .alert {

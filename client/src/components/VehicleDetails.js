@@ -1,6 +1,15 @@
 import react from "react";
+import { RiEdit2Line, RiDeleteBinLine } from "react-icons/ri";
+import moment from "moment";
 
 const VehicleDetails = ({ vehicles, onEditClick, onDeleteClick }) => {
+  const dateFormat = (date) => {
+    let formattedDate = moment(date);
+    formattedDate = formattedDate.format("MMM Do, YYYY");
+
+    return formattedDate;
+  };
+
   return (
     <>
       <h2>vehicle details</h2>
@@ -14,6 +23,7 @@ const VehicleDetails = ({ vehicles, onEditClick, onDeleteClick }) => {
           <tr>
             <th>Number Plate</th>
             <th>Vehicle Type</th>
+            <th>Create Date</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -23,12 +33,19 @@ const VehicleDetails = ({ vehicles, onEditClick, onDeleteClick }) => {
               <tr key={vehicle._id}>
                 <td>{vehicle.numberPlate}</td>
                 <td>{vehicle.numberPlateType}</td>
+                <td>{dateFormat(vehicle.createdAt)}</td>
                 <td>
-                  <button onClick={() => onEditClick(vehicle._id)}>
-                    Update
+                  <button
+                    onClick={() => onEditClick(vehicle._id)}
+                    className="edit-btn"
+                  >
+                    <RiEdit2Line size="20px" />
                   </button>
-                  <button onClick={() => onDeleteClick(vehicle._id)}>
-                    Delete
+                  <button
+                    onClick={() => onDeleteClick(vehicle._id)}
+                    className="delete-btn"
+                  >
+                    <RiDeleteBinLine size="20px" />
                   </button>
                 </td>
               </tr>

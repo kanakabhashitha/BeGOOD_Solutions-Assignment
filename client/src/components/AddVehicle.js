@@ -97,6 +97,7 @@ const AddVehicle = () => {
       }, 3000);
 
       setNumberPlate("");
+      setIsEdit(false);
 
       console.log(response);
     } catch (error) {
@@ -114,7 +115,7 @@ const AddVehicle = () => {
   //delete vehicle details
   const onDeleteClick = (id) => {
     setDeleteId(id);
-    deleteVehicle(deleteId);
+    deleteVehicle(id);
   };
 
   //delete vehicle to db from using axios
