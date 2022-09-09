@@ -13,9 +13,9 @@
 2.  Now you have to login to **MongoDB Atlas Database** (https://account.mongodb.com/account/login?signedOut=true) and create the database that you want. If you do not have an account, please make sure to register with it.
 3.  Next, insert your database **connection string** into the "**MONGO URL\*" field of the **.env\*\* file.
 
-or
+    or
 
-simply you can used "**mongoDB compass**" as a data base. to do that connect the mongoDB compass.
+    simply you can used "**mongoDB compass**" as a data base. to do that connect the mongoDB compass.
 
 ### Run backend
 
